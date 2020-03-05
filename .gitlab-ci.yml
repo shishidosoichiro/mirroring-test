@@ -7,8 +7,6 @@ stages:
 push:
   stage: push
   only:
-    changes:
-      - "**/*"
     variables:
       - $MANUAL == null
   script: 
@@ -18,8 +16,6 @@ push:
 pull:
   stage: pull
   except:
-    changes:
-      - "**/*"
     variables:
       - $MANUAL == null
   script: 

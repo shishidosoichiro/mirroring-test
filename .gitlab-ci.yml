@@ -6,13 +6,18 @@ stages:
 
 push:
   stage: push
+  only:
+    variables:
+      - $CI_JOB_MANUAL == null
   script: 
     - apk add git make
     - make remote push REF_NAME=$CI_COMMIT_REF_NAME USERNAME=$GITHUB_USERNAME TOKEN=$GITHUB_TOKEN
 
 pull:
   stage: pull
-  when: manual
+  only:
+    variables:
+      - $CI_JOB_MANUAL != null
   script: 
     - apk add git make
     #- mkdir -p ~/.ssh

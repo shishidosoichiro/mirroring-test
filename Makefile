@@ -14,5 +14,6 @@ push:
 	git push remote HEAD:$(REF_NAME)
 
 pull:
-	git pull remote $(REF_NAME)
+	git fetch remote
+	git merge remote/$(REF_NAME)
 	git push origin HEAD:$(REF_NAME)

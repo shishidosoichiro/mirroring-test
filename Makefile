@@ -4,6 +4,8 @@ REMOTE=https://$(USERNAME):$(TOKEN)@github.com/shishidosoichiro/mirroring-test.g
 REF_NAME=master
 
 remote:
+	git remote -v
+	git remote remove remote || true
 	git remote add remote $(REMOTE)
 
 push:

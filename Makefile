@@ -10,6 +10,7 @@ remote:
 
 push:
 	git fetch remote
+	git log --graph -10
 	git push remote $(REF_NAME)
 
 pull:

@@ -8,7 +8,7 @@ push:
   stage: push
   script: 
     - apk add git make
-    - make push REF_NAME=$CI_COMMIT_REF_NAME USERNAME=$GITHUB_USERNAME TOKEN=$GITHUB_TOKEN
+    - make remote push REF_NAME=$CI_COMMIT_REF_NAME USERNAME=$GITHUB_USERNAME TOKEN=$GITHUB_TOKEN
 
 pull:
   stage: pull
@@ -24,4 +24,4 @@ pull:
     #- git config --global user.name "hogehoge-runner@example.jp"
     #- git config --global user.email "hogehoge-runner@example.jp"
     #- git remote set-url --push origin git@$CI_SERVER_HOST:$CI_PROJECT_PATH.git
-    - make pull REF_NAME=$CI_COMMIT_REF_NAME USERNAME=$GITHUB_USERNAME TOKEN=$GITHUB_TOKEN
+    - make remote pull REF_NAME=$CI_COMMIT_REF_NAME USERNAME=$GITHUB_USERNAME TOKEN=$GITHUB_TOKEN

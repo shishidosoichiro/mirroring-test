@@ -15,9 +15,9 @@ push:
 
 pull:
   stage: pull
-  only:
+  except:
     variables:
-      - $CI_JOB_MANUAL != null
+      - $CI_JOB_MANUAL == null
   script: 
     - apk add git make
     #- mkdir -p ~/.ssh

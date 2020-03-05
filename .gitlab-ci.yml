@@ -1,5 +1,8 @@
 image: docker:stable
 
+variables:
+  GIT_SSL_CAINFO: /certs/ca.crt
+
 stages:
   - push
   - pull

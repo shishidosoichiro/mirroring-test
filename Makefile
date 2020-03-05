@@ -7,6 +7,7 @@ remote:
 	git remote add remote $(REMOTE)
 
 push:
+	git fetch remote
 	git push remote $(REF_NAME)
 
 pull:

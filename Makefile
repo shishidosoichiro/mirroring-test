@@ -1,6 +1,6 @@
 USERNAME=
 TOKEN=
-REMOTE=https://$(USERNAME):$(TOKEN)github.com/shishidosoichiro/mirroring-test.git
+REMOTE=https://$(USERNAME):$(TOKEN)@github.com/shishidosoichiro/mirroring-test.git
 REF_NAME=master
 
 remote:

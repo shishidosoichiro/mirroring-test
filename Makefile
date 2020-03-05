@@ -11,7 +11,7 @@ remote:
 push:
 	git fetch remote
 	git log --oneline --decorate --graph -10
-	git push remote $(REF_NAME)
+	git push remote HEAD:$(REF_NAME)
 
 pull:
 	git pull remote $(REF_NAME)

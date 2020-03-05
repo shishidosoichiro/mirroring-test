@@ -7,8 +7,10 @@ stages:
 push:
   stage: push
   only:
+    changes:
+      - **/*
     variables:
-      - $CI_JOB_MANUAL == null
+      - $MANUAL == null
   script: 
     - apk add git make
     - make remote push REF_NAME=$CI_COMMIT_REF_NAME USERNAME=$GITHUB_USERNAME TOKEN=$GITHUB_TOKEN
@@ -16,6 +18,8 @@ push:
 pull:
   stage: pull
   except:
+    changes:
+      - **/*
     variables:
       - $MANUAL == null
   script: 

@@ -15,4 +15,4 @@ push:
 
 pull:
 	git pull remote $(REF_NAME)
-	git push origin $(REF_NAME)
+	git push origin HEAD:$(REF_NAME)

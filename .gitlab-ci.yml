@@ -19,7 +19,7 @@ pull:
   stage: pull
   except:
     changes:
-      - **/*
+      - "**/*"
     variables:
       - $MANUAL == null
   script: 
